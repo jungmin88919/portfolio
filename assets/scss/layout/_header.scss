@@ -1,0 +1,102 @@
+.header{
+
+    color: $--white;
+    display: flex;
+    justify-content: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 83px;
+    z-index: 10;
+
+
+    &-inner{
+        width: 1248px;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        transition: all 0.5s ease-in-out;
+        font-family: $--semiBold;
+
+        @include tablet{
+            padding-left: 96px;
+            padding-right: 96px;
+            width: 100%;
+        }
+
+        @include mobile{
+            padding-left: 40px;
+            padding-right: 40px;
+        }
+
+        .name{
+            cursor: pointer;
+            pointer-events: fill;
+        }
+
+        .nav-sidebar{
+            display: flex;
+            align-items: center;
+        }
+
+        .btn-talk{
+            position: relative;
+            &::after{
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                width: 100%;
+                height: 1px;
+                background: $--white;
+                transition: all 250ms ease;
+                content: '';
+            }
+
+            &:hover{
+                &::after{
+                    width: 50%;
+                }
+            }
+        }
+
+        .nav-bar{
+            display: none;
+
+            @include mobile{
+                display: block;
+
+                .nav-all-btn{
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    justify-content: center;
+                    transform: translateY(1px);
+                    width: 30px;
+                    height: 30px;
+                    margin-left: 32px;
+                    cursor: pointer;
+
+                    &:hover{
+                        .line_1{
+                            margin-right: 10px;
+                        }
+                        .line_2{
+                            margin-left: 10px;
+                        }
+                    }
+                }
+                .nav-line{
+                    width: 30px;
+                    height: 2px;
+                    background: $--white;
+                    transition: all 200ms linear;
+                }
+                .line_1{
+                    margin-bottom: 6px;
+                }
+            }
+        }
+    }
+}

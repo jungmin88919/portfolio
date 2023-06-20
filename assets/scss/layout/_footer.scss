@@ -1,0 +1,123 @@
+.footer{
+    width: 100%;
+    // padding-left: 96px;
+    // padding-right: 96px;
+    // display: flex;
+    // align-items: center;
+    // justify-content: center;
+    background: #FAF2F2;
+    position: relative;
+    z-index: 0;
+    
+
+
+    
+.contact{
+    // background: #0f0;
+
+    // display: flex;
+    // align-items: center;
+    // justify-content: center;
+    width: 100%;
+    padding: 150px 0;
+    
+    overflow: hidden;
+    position: relative;
+    z-index: 2;
+
+    &__title{
+        text-align: center;
+        max-width: 757px;
+        // height: 359px;
+        margin: 0 auto;
+        margin-bottom: 48px;
+        font-weight: 600;
+
+        @include mobile{
+            width: 390px;
+            height: 219px;
+        }
+
+        &-text{
+            font-size: 70px;
+            line-height: 1.2;
+            color: $--black;
+            font-family: $--font-kr;
+            img{
+                margin: 0 auto;
+            }
+
+            @include mobile{
+                font-size: 57.336px;
+                line-height: 54.61px;
+            }
+        }
+    }
+
+}
+
+
+    &__inner{
+        max-width: 757px;
+        height: 400px;
+        padding-top: 48px;
+        padding-bottom: 24px;
+        margin: 0 auto;
+        border-top: 0.5px solid #BDBDBD;
+        position: relative;
+
+        @include tablet{
+            width: 100%;
+            padding: 48px 0;
+        }
+    }
+
+    &__head{
+
+        margin-bottom: 96px;
+
+        .head_desc{
+            display: flex;
+            flex-direction: column;
+            font-size: 16px;
+            line-height: 20px;
+            color: #636363;
+            font-family: $--medium;
+            margin-bottom: 16px;
+        }
+
+        .footer-email{
+            display: inline;
+            font-size: 68.808px;
+            line-height: 65.5px;
+            color: $--black;
+            font-family: $--semiBold;
+            position: relative;
+
+            @include tablet{
+                font-size: 39.808px;
+                line-height: 37.91px;
+            }
+
+            &::after{
+                content: "";
+                position: absolute;
+                bottom: -12px;
+                left: 0;
+                width: 100%;
+                height: 4px;
+                background: $--black;
+                transition: all 350ms ease-in-out;
+            }
+
+            &:hover{
+                &::after{
+                    content: "";
+                    width: 50%;
+                }
+            }
+        }
+    }
+
+
+}
