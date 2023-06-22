@@ -19,15 +19,7 @@ $(function(){
     
     
     
-    
-    
-        //모바일 메뉴
-        $('.nav-all-btn').click(function(){
-            $('.nav-allmenu').css('right','0');
-        })
-        $('.close-btn').click(function(){
-            $('.nav-allmenu').css('right','100vw');
-        })
+
     
     
     
@@ -144,5 +136,57 @@ $(function(){
         .addLabel('scrollUp')
         .to('.footer .contact',{y:0},'scrollUp')
         .to('.footer__inner',{y:0},'scrollUp')
+
+
+
+
+        ScrollTrigger.matchMedia({
+            "(min-width: 1440px)": function() {
+                gsap.set('.footer .contact',{y:-150})
+                gsap.set('.footer__inner',{y:-400})
+            
+                scrollUp = gsap.timeline({
+                    scrollTrigger:{
+                        trigger:".footer",
+                        scroller: ".wrap",
+                        start:"0% 80%",
+                        end:"100% 100%",
+                        // markers:true, //끝나면 지우면됨!
+                        scrub:0,
+                    },
+                    defaults:{
+                        ease:'none'
+                    }
+                })
+                
+                scrollUp
+                .addLabel('scrollUp')
+                .to('.footer .contact',{y:0},'scrollUp')
+                .to('.footer__inner',{y:0},'scrollUp')
+              }, 
+
+            //   "(min-width: 750px)": function() {
+            //     // 스크롤이벤트 - sc-main
+            //     scrollMove = gsap.timeline({
+            //         scrollTrigger:{
+            //             trigger:".sc-main",
+            //             scroller: ".wrap",
+            //             start:"0% 0%",
+            //             end:"40% 4%%",
+            //             // markers:true, //끝나면 지우면됨!
+            //             scrub:0,
+            //         },
+            //     })
+                
+            //     scrollMove
+            //     .addLabel('text')
+            //     .to('.sc-main .title_text_layer1',{xPercent:-50, left:"50%" },'text')
+            //     .to('.sc-main .title_text_layer2',{ xPercent:-50, left:"50%" },'text')
+            //     .to('.sc-main .desc_text_layer1',{ xPercent:-50, left:"50%" },'text')
+            //     .to('.sc-main .desc_text_layer2',{ xPercent:-50, left:"50%" },'text')
+            //     .to('.sc-main .desc_text_layer3',{ xPercent:-50, left:"50%" },'text')
+            //   }
+        })
     
     })
+    
