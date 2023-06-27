@@ -41,35 +41,25 @@ $(function(){
         })
     
     
-    
-    
-    
-    
-        load=gsap.timeline({
-            onComplete:function(){
-                $('.load').addClass('hide');
-            }
-        })
-        load.to('.load .item',{delay:1,yPercent:-100})
-        load.to('.load .item',{yPercent:-200})
-        load.to('.load .item',{yPercent:-300})
-    
-    
-        // 마우스 이벤트
-        $(window).mousemove(function(e){
+        $('.btn-area a').click(function(e){
             e.preventDefault();
-            gsap.to('.cursor',{
-                x:e.clientX,
-                y:e.clientY,
-                duration:.2,
-            })
+            projectHeight = $('.sc-project').offset().top;
+            
+            
+            gsap.to('html,body',{
+                scrollTop:projectHeight,
+                duration: .5,
+              })
         })
+    
     
         $('[data-hover]').hover(function(){
             $('.cursor').addClass('data-hover');
         },function(){
             $('.cursor').removeClass('data-hover')
         })
+
+
     
         // 스크롤이벤트 - sc-main
         scrollMove = gsap.timeline({
@@ -164,28 +154,6 @@ $(function(){
                 .to('.footer .contact',{y:0},'scrollUp')
                 .to('.footer__inner',{y:0},'scrollUp')
               }, 
-
-            //   "(min-width: 750px)": function() {
-            //     // 스크롤이벤트 - sc-main
-            //     scrollMove = gsap.timeline({
-            //         scrollTrigger:{
-            //             trigger:".sc-main",
-            //             scroller: ".wrap",
-            //             start:"0% 0%",
-            //             end:"40% 4%%",
-            //             // markers:true, //끝나면 지우면됨!
-            //             scrub:0,
-            //         },
-            //     })
-                
-            //     scrollMove
-            //     .addLabel('text')
-            //     .to('.sc-main .title_text_layer1',{xPercent:-50, left:"50%" },'text')
-            //     .to('.sc-main .title_text_layer2',{ xPercent:-50, left:"50%" },'text')
-            //     .to('.sc-main .desc_text_layer1',{ xPercent:-50, left:"50%" },'text')
-            //     .to('.sc-main .desc_text_layer2',{ xPercent:-50, left:"50%" },'text')
-            //     .to('.sc-main .desc_text_layer3',{ xPercent:-50, left:"50%" },'text')
-            //   }
         })
     
     })

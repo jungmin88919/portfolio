@@ -146,7 +146,8 @@ body {
   font-size: 14px;
   font-family: "Visby_CF_SemiBold";
   margin-top: 12px;
-  transition: all 250ms ease;
+  transform: scale(1);
+  transition: transform 250ms ease;
 }
 .btn-area a {
   display: block;
@@ -170,6 +171,9 @@ body {
   transform: rotate(136deg);
   margin-top: 25px;
 }
+.btn-area:hover {
+  transform: scale(1.1);
+}
 
 .headline {
   font-size: 68.81px;
@@ -182,32 +186,6 @@ body {
     font-size: 47.776px;
     line-height: 45.5px;
     text-align: center;
-  }
-}
-
-.cursor {
-  position: fixed;
-  top: 0;
-  left: 0;
-  transform-origin: center;
-  width: 20px;
-  height: 20px;
-  border-radius: 50%;
-  transition: width 350ms ease-in-out, height 350ms ease-in-out;
-  mix-blend-mode: difference;
-  background: rgb(255, 255, 255);
-  z-index: 1000000;
-  pointer-events: none;
-}
-.cursor.data-hover {
-  width: 40px;
-  height: 40px;
-  transform-origin: center;
-  transition: width 350ms ease-in-out, height 350ms ease-in-out;
-}
-@media (max-width: 990px) {
-  .cursor {
-    display: none;
   }
 }
 
@@ -431,14 +409,12 @@ body {
 }
 .footer .contact__title {
   text-align: center;
-  max-width: 757px;
   margin: 0 auto;
   margin-bottom: 48px;
   font-weight: 600;
 }
 @media (max-width: 990px) {
   .footer .contact__title {
-    width: 390px;
     height: 219px;
   }
 }
@@ -670,15 +646,6 @@ body {
   position: relative;
   margin: 0 auto;
   padding-bottom: 50px;
-}
-.text-wrap__inner::before {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  height: 1px;
-  background: rgba(255, 255, 255, 0.3);
-  content: "";
 }
 @media (max-width: 1440px) {
   .text-wrap__inner {
@@ -1184,6 +1151,11 @@ body {
 .sc-carrers__head {
   padding-left: 96px;
   margin-bottom: 96px;
+}
+@media (max-width: 1440px) {
+  .sc-carrers__head {
+    padding-left: 0;
+  }
 }
 @media (max-width: 990px) {
   .sc-carrers__head {

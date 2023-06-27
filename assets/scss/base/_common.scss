@@ -21,7 +21,8 @@
     font-size: 14px;
     font-family: $--semiBold;
     margin-top: 12px;
-    transition: all 250ms ease;
+    transform: scale(1.0);
+    transition: transform 250ms ease;
 
     a{
         display: block;
@@ -48,6 +49,10 @@
             }
         }
     }
+
+    &:hover{
+        transform: scale(1.1);
+    }
 }
 
 
@@ -61,32 +66,5 @@
         font-size: 47.776px;
         line-height: 45.5px;
         text-align: center;
-    }
-}
-
-.cursor {
-    position: fixed;
-    top: 0;
-    left: 0;
-    transform-origin: center;
-    width: 20px;
-    height: 20px;
-    border-radius: 50%;
-    transition: width 350ms ease-in-out, height 350ms ease-in-out;
-    mix-blend-mode: difference;
-    background: $--white;
-    z-index: 1000000;
-    pointer-events: none;
-
-    &.data-hover{
-        width: 40px;
-        height: 40px;
-        transform-origin: center;
-        transition: width 350ms ease-in-out, height 350ms ease-in-out;
-
-    }
-
-    @include mobile{
-        display: none;
     }
 }
