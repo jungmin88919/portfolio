@@ -1185,6 +1185,11 @@ body {
   padding-left: 96px;
   margin-bottom: 96px;
 }
+@media (max-width: 990px) {
+  .sc-carrers__head {
+    padding-left: 0;
+  }
+}
 .sc-carrers__list {
   border-bottom: 1px solid rgba(255, 255, 255, 0.3);
 }
