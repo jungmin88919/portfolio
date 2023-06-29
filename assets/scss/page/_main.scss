@@ -748,9 +748,10 @@
         }
         .project{
             flex: 1;
-            font-size: 23.04px;
-            line-height: 28.8px;
+            font-size: 23px;
+            line-height: 28px;
             font-family: $--font-kr;
+            font-weight: 300;
             color: $--white;
             transition: all 350ms ease-in-out;
 

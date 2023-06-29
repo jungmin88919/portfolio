@@ -1200,9 +1200,10 @@ body {
 }
 .sc-carrers__item .project {
   flex: 1;
-  font-size: 23.04px;
-  line-height: 28.8px;
+  font-size: 23px;
+  line-height: 28px;
   font-family: "Pretendard-Regular";
+  font-weight: 300;
   color: rgb(255, 255, 255);
   transition: all 350ms ease-in-out;
 }
