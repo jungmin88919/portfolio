@@ -41,16 +41,6 @@ $(function(){
         })
     
     
-        $('.btn-area a').click(function(e){
-            e.preventDefault();
-            projectHeight = $('.sc-project').offset().top;
-            
-            
-            gsap.to('html,body',{
-                scrollTop:projectHeight,
-                duration: .5,
-              })
-        })
     
     
         $('[data-hover]').hover(function(){
